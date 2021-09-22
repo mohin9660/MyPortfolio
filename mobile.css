@@ -1,0 +1,458 @@
+
+*{
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+
+}
+
+.dotted-hr{
+    border: dotted 5px white;
+    border-bottom: none;
+    margin: 20px auto;
+    width:125px
+}
+
+
+
+.navbar{
+    background: darkcyan;
+}
+
+.navbar::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.nav-logo img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 5px solid rgb(36, 20, 20);
+}
+
+@font-face{
+    font-family: sangku3;
+    src:url(../fonts/Ewert-Regular.ttf)
+}
+.navbar h2{
+    font-size: 1.8rem;
+    text-align: center;
+    color: rgb(25, 8, 100);
+    font-family: sangku3;
+}
+
+.navbar-menu{
+    display: flex;
+    flex-direction: column;
+}
+
+@font-face{
+    font-family: Nevbar-menu-style;
+    src: url(../fonts/DancingScript-Regular.ttf)
+}
+
+
+.navbar-menu a{
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
+    background: #0c6168;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    font-family: Nevbar-menu-style;
+
+
+}
+
+
+
+[class*="col-"]{
+    float: left;
+    padding: 10px;
+}
+
+[class*="col-"]{
+    width:100%;
+    text-align: center;
+}
+
+
+
+     /* Profile started */
+
+.profile{
+    background: rgb(115, 14, 197);
+    padding:20px;
+    color: white;
+    background-image: url(img/Backgrund.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: .8;
+    height: 100%;
+}
+
+.profile h2{
+    font-size: 35px;
+    text-align: center;
+    color: #13021b;
+}
+
+.profile p{
+    text-align: center;
+    font-size: 23px;
+}
+
+.profile img{
+    margin-left: 35%;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+    /* profile ended*/
+
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+       /* About Me started from here */
+
+.about-me{
+    background: #39a4a6;
+    padding:1.3rem;
+    color: white;
+    text-align: center;
+}
+
+
+.about-me-image img{
+    border: 5ps solid white;
+    border-radius: 50%;
+    height:300px;
+    width:300px;
+}
+.about-me::after{
+    clear: both;
+    display: table;
+    content: "";
+}
+
+ /* About Me ended here */
+
+ /* ::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+     /* Professional Experience started here */
+
+.professional-experieence{
+    padding: 2% 0%;
+    color: rgb(0, 0, 0);
+}
+
+.professional-experieence .card{
+    background: #a39e9e;
+    padding: 10px;
+    border-radius: 5px;
+    transition: .3s;
+}
+
+.professional-experieence .card:hover{
+    box-shadow: 0px 4px 8px 5px black;
+}
+
+.card-icon img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 5px solid white;
+}
+
+.card-title h2{
+    background: rgb(141, 113, 113);
+    width: 100%;
+    border-radius: 5px;
+}
+
+.card-desc ol li{
+    text-align: left;
+}
+
+
+
+     /* Professional Experience ended here */
+
+/* :::::::::::::::::::::::::::::::::::::::::: */
+
+       /* SKILLS started from here */
+
+
+.skilld-container{
+    padding-right: 45px;
+}
+
+.skilld-container li{
+    list-style: none;
+    font-weight: bolder;
+    margin: 11px 0px;
+    text-align: left;
+    position: relative;
+}
+
+.skilld-container li::before{
+    content: "";
+    position: absolute;
+    top: calc(100% + 0px);
+    left:0;
+    background: rgb(112, 104, 117);
+    width:100%;
+    height: 10px;
+    border-radius: 1000px;
+
+}
+
+.skilld-container li::after{
+    content: "";
+    position: absolute;
+    top: calc(100% + 0px);
+    left:0;
+    background: rgb(39, 6, 221);
+    width:0;
+    height: 10px;
+    border-radius: 1000px;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+.skilld-container li.html::after{
+    animation-name: html;
+}
+
+@keyframes html{
+    to{
+        width: 90%;
+    }
+}
+
+
+
+.skilld-container li.css::after{
+    animation-name: css;
+}
+
+@keyframes css{
+    to{
+        width: 80%;
+    }
+}
+
+
+.skilld-container li.bootstrap::after{
+    animation-name: bootstrap;
+}
+
+@keyframes bootstrap{
+    to{
+        width: 75%;
+    }
+}
+
+
+.skilld-container li.javascript::after{
+    animation-name: javascript;
+}
+
+@keyframes javascript{
+    to{
+        width: 50%;
+    }
+}
+
+
+.skilld-container li.jquery::after{
+    animation-name: jquery;
+}
+
+@keyframes jquery{
+    to{
+        width: 20%;
+    }
+}
+
+
+.skilld-container li.github::after{
+    animation-name: github;
+}
+
+@keyframes github{
+    to{
+        width: 60%;
+    }
+}
+.skilld-container li.logo::after{
+    animation-name: logo;
+}
+
+@keyframes logo{
+    to{
+        width: 65%;
+    }
+}
+
+
+
+.skilld-container li.photoshop::after{
+    animation-name: photoshop;
+}
+
+@keyframes photoshop{
+    to{
+        width: 40%;
+    }
+}
+.skilld-container li.marketing::after{
+    animation-name: marketing;
+}
+
+@keyframes marketing{
+    to{
+        width: 80%;
+    }
+}
+
+       /* SKILLS ended here */
+
+
+/* Achievement-contact started from here */
+.achievement-contact{
+    background: #39a4a6;
+    color: aliceblue;
+    width:100%;
+}
+
+.achievement-contact{
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.achievement-contact p{
+    text-align: left;
+}
+
+
+.contact{
+    text-align: center;
+}
+
+.contact input, textarea{
+      width:100%;
+      padding: 10px;
+      text-align: center;
+      border: none;
+      outline: none;
+      resize: none;
+      border-radius: 5px;
+}
+
+.contact button{
+    border:none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    margin: 10px;
+    width:100px;
+    cursor: pointer;
+}
+
+.contact-icon{
+    width:120px;
+    margin: auto;
+}
+
+.contact-icon i{
+    font-size: 25px;
+    text-align: center;
+    margin: 10px;
+    background: white;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.contact-link .fa-facebook{
+   color: #1877F2
+}
+
+.contact-link .fa-youtube{
+     color: #CD201F
+}
+
+.contact-link .fa-google{
+   color: red
+}
+
+
+.contact-link .fa-instagram{
+     color: #E4405F
+}
+
+.contact-link .fa-whatsapp{
+    color:#25D366
+}
+
+.contact-link .fa-twitter{
+    color: #1DA1F2
+}
+
+/* Achievement-contact ended here */
+
+
+      /* Footer started from here */
+
+.footer{
+    background: #000;
+    color:white;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.footer::after{
+    display: table;
+    content: "";
+    clear: both;
+}
+
+.footer-menu a{
+   color: white;
+   display: block;
+   text-decoration: none;
+   margin: 15px 0px;
+   font-weight: bolder;
+   transition: .3s;
+}
+
+.footer-menu a:hover{
+    color: gray;
+}
+
+
+      /* Footer ended here */
+
+
+
+
+@font-face{
+    font-family: my-style;
+    src: url(../fonts/Ewert-Regular.ttf)
+}
+    
+.font-family-style h2{
+        font-family: my-style;
+}
